@@ -1,0 +1,895 @@
+/* resetCSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+/* -----ここから下に記述してください----- */
+html {
+  font-size: 20px;
+}
+
+body {
+  font-family: europa, "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
+    "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*-------ヘッダーメニュー部分 ここから-------*/
+header {
+  background-color: rgba(000, 000, 000, 0.5);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100px;
+}
+
+.header-logo a {
+  font-family: cursive;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 30px;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header li a {
+  text-decoration: none;
+  padding: 0 20px;
+  font-size: 1rem;
+  color: #fff;
+  display: block;
+  position: relative;
+}
+
+header li span:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 40%;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+header li:hover span:after {
+  opacity: 1;
+  left: 20%;
+  width: 60%;
+}
+
+header input {
+  display: none;
+}
+
+header label {
+  display: none;
+}
+
+/*-------キービジュアル部分 ここから-------*/
+
+.key_visual {
+  position: relative;
+  background-image: url(../../images/kv.jpg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  width: 100%;
+  height: 80vh;
+  min-height: 660px;
+}
+
+.key_visual h1 {
+  font-family: fantasy;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 10px 10px 5px #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*-------コンセプト部分 ここから-------*/
+.concept {
+  width: 100%;
+  height: 100%;
+  padding-top: 120px;
+}
+
+h2 {
+  position: relative;
+  font-family: fantasy;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+h2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: inline-block;
+  width: 60px;
+  height: 2px;
+  transform: translateX(-50%); /*位置調整*/
+  background-color: #000;
+  border-radius: 2px;
+}
+
+.contents {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.concept_img,
+.concept_txt {
+  width: calc(45% - 40px);
+}
+
+.concept img {
+  width: 100%;
+}
+
+.concept_txt {
+  height: 600px;
+  overflow-y: auto;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h3:before,
+h3:after {
+  content: "";
+  display: inline-block;
+  vertical-align: 10px;
+  width: 20px;
+  height: 2px;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+h3:before {
+  margin-right: 5px;
+}
+
+h3:after {
+  margin-left: 5px;
+}
+
+/*-------アプリケーション部分 ここから-------*/
+.application {
+  width: 100%;
+  height: 100%;
+  padding-top: 120px;
+}
+
+.application_wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.application_img {
+  width: 60%;
+}
+
+.application_txt {
+  width: 40%;
+}
+
+.application_bg {
+  background-image: url(../../images/main_02.jpg);
+  display: inline-block;
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.application_txt_inner {
+  padding-left: 60px;
+  position: relative;
+}
+
+.application_txt_inner:before {
+  position: absolute;
+  content: "";
+  background-color: #f4f4f4;
+  width: calc(100% + 200px);
+  height: calc(100% + 200px);
+  right: 0;
+  bottom: -100px;
+  z-index: -10;
+}
+
+.application_txt p {
+  line-height: 2;
+}
+
+/*-------ギャラリー部分 ここから-------*/
+.gallery {
+  width: 100%;
+  height: 100%;
+  padding-top: 120px;
+}
+
+.gallery-container {
+  background-image: url(../../images/main_03.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+}
+
+.gallery-mask {
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.gallery h3 {
+  padding-top: 80px;
+}
+
+.gallery p {
+  width: 70%;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+/*-------カード部分 ここから-------*/
+.card {
+  width: 100%;
+  height: 100%;
+  padding-top: 120px;
+}
+
+.card_container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card li {
+  width: calc((100% / 3) - 16px);
+  padding: 0 16px 50px 0;
+}
+
+.card li:nth-child(3n) {
+  padding-right: 0;
+}
+
+h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.card_image {
+  padding: 4px;
+  border: 2px solid #000;
+  margin-bottom: 16px;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+/*-------FAQ部分 ここから-------*/
+.faq {
+  width: 100%;
+  height: 100%;
+  padding-top: 120px;
+  font-size: 16px;
+}
+
+.faq .container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.faq_inner {
+  margin: 0 auto;
+  padding: 60px 90px;
+  background-color: rgba(194, 194, 208, 0.1);
+}
+
+.faq_checkbox {
+  display: none;
+}
+
+.faq_label {
+  display: block;
+  cursor: pointer;
+  text-align: left;
+  padding: 24px;
+  background-color: #fff;
+  box-shadow: 0 10px 55px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.faq_label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  background: url(../../images/faq_off.svg) no-repeat 50%;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+}
+
+.faq input:checked + .faq_label::after {
+  background: url(../../images/faq_on.svg) no-repeat 50%;
+}
+
+.faq_answer {
+  max-height: 0;
+  overflow-y: hidden;
+  transition: all 0.5s;
+}
+
+.faq input:checked + .faq_label + .faq_answer {
+  max-height: 120px;
+  visibility: visible;
+}
+
+.faq input:checked + .faq_label + .faq_answer_img {
+  max-height: 500px;
+}
+
+.faq_answer p {
+  text-align: left;
+  color: #fff;
+  padding: 40px 24px 40px 3rem;
+  background-color: rgba(37, 117, 252, 0.8);
+  text-indent: -1rem;
+}
+
+.faq_modal_trigger {
+  display: inline-block;
+  margin-top: 24px;
+  color: #108de8;
+  z-index: 111;
+}
+
+.faq_modal_wrapper {
+  display: none;
+}
+
+.faq input:checked + .faq_modal_trigger + .faq_modal_wrapper {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(30, 30, 30, 0.8);
+  z-index: 100;
+  font-size: 1rem;
+}
+
+.faq_answer img {
+  height: 100%;
+}
+
+.faq_modal_trigger::after {
+  content: "モーダルを開く";
+}
+
+.faq_modal_content {
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 400px;
+  padding: 20px 30px;
+  background-color: #fff;
+}
+
+.faq_modal_title {
+  padding: 16px 0 32px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.faq_modal_txt {
+  z-index: 200;
+}
+
+/*-------コンタクト部分 ここから-------*/
+.contact {
+  width: 100%;
+  height: 100%;
+  padding-top: 120px;
+}
+
+.contact .form {
+  width: 70%;
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+.contact .contact_label:after {
+  content: "*";
+  color: #f00;
+  margin-left: 5px;
+}
+
+.contact input {
+  height: 50px;
+  border: 1px solid #ddd;
+  width: 100%;
+  font-size: 0.8rem;
+  margin: 5px 0 20px 0;
+  padding: 0 10px;
+}
+
+.contact textarea {
+  height: 200px;
+  border: 1px solid #ddd;
+  width: 100%;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  padding: 5px 10px;
+}
+
+.contact p {
+  font-size: 14px;
+}
+
+.contact p span {
+  color: #f00;
+  font-size: 1rem;
+}
+
+::-webkit-input-placeholder {
+  font-family: europa, "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
+    "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+:-moz-placeholder {
+  font-family: europa, "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
+    "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+.contact .contact_btn {
+  display: block;
+  cursor: pointer;
+  width: 300px;
+  height: 60px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.contact .contact_btn:hover {
+  background-color: #666;
+  color: #fff;
+}
+
+/*-------フッター部分 ここから-------*/
+footer {
+  width: 100%;
+  height: 100%;
+  padding-top: 120px;
+}
+
+footer p {
+  padding: 16px;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /*-------【レスポンシブ】ヘッダー ここから-------*/
+  header .container {
+    height: 47px;
+  }
+
+  .header-logo a {
+    display: block;
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  header label {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    clear: both;
+    display: block;
+  }
+
+  header .hamburger_icon {
+    display: inline-block;
+    width: 35px;
+    height: 33px;
+    position: relative;
+  }
+
+  header .hamburger_icon i {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+
+  header .hamburger_icon i:nth-child(1) {
+    top: 0;
+  }
+
+  header .hamburger_icon i:nth-child(2) {
+    margin: auto;
+    top: 0;
+    bottom: 0;
+  }
+
+  header .hamburger_icon i:nth-child(3) {
+    bottom: 0;
+  }
+
+  header input:checked ~ label .hamburger_icon i:nth-child(1) {
+    margin: auto;
+    transform: rotate(45deg);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  header input:checked ~ label .hamburger_icon i:nth-child(2) {
+    display: none;
+  }
+
+  header input:checked ~ label .hamburger_icon i:nth-child(3) {
+    margin: auto;
+    transform: rotate(-45deg);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .header_list {
+    transform: translateX(100%);
+    opacity: 0;
+    margin: 0;
+    display: block;
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    transition: all 0.5s ease-out;
+  }
+
+  .header_list ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .header_list li {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    line-height: 100px;
+  }
+
+  .header_list a {
+    padding: 0 50px;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  header .container input:checked ~ .header_list {
+    z-index: 99;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /*-------【レスポンシブ】キービジュアル部分 ここから-------*/
+  .key_visual h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  /*-------【レスポンシブ】コンセプト部分 ここから-------*/
+  .contents {
+    display: block;
+    padding: 0 24px;
+  }
+
+  .concept_img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .concept_txt {
+    width: 100%;
+    height: 400px;
+  }
+
+  /*-------【レスポンシブ】アプリケーション ここから-------*/
+  .application_wrapper {
+    display: block;
+  }
+
+  .application_img {
+    width: 100%;
+  }
+
+  .application_txt {
+    width: 100%;
+  }
+
+  .application_bg {
+    height: 500px;
+  }
+
+  .application_txt_inner {
+    padding: 30px 24px;
+    background-color: #f4f4f4;
+  }
+
+  .application_txt_inner:before {
+    content: none;
+  }
+
+  /*-------【レスポンシブ】ギャラリー ここから-------*/
+  .gallery h3 {
+    padding-top: 30px;
+  }
+
+  .gallery p {
+    width: 80%;
+    font-weight: bold;
+    line-height: 2;
+  }
+
+  /*-------【レスポンシブ】カード ここから-------*/
+  .card_container {
+    width: 90%;
+  }
+
+  .card ul {
+    display: block;
+  }
+
+  .card li {
+    width: 100%;
+    padding: 0 0 50px 0;
+  }
+
+  /*-------【レスポンシブ】コンタクト ここから-------*/
+  .contact .form {
+    width: 90%;
+  }
+
+  .contact .contact_btn {
+    margin: 60px auto;
+  }
+
+  /*-------【レスポンシブ】FAQ ここから-------*/
+  .faq .container {
+    padding: 60px 24px 0;
+  }
+
+  .faq_inner {
+    padding: 20px 30px;
+  }
+
+  .faq_label {
+    padding: 24px 36px 24px 24px;
+  }
+
+  .faq_label::after {
+    right: 16px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .faq input:checked + .faq_label + .faq_answer {
+    max-height: 224px;
+    visibility: visible;
+  }
+
+  .faq input:checked + .faq_label + .faq_answer_img {
+    max-height: 500px;
+  }
+
+  .faq img {
+    width: 100%;
+  }
+
+  .faq_modal_content {
+    overflow-y: auto;
+  }
+
+  /*-------【レスポンシブ】フッター ここから-------*/
+  footer {
+    padding: 0;
+  }
+}
